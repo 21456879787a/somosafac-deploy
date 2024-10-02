@@ -38,10 +38,10 @@ public class UsuarioEntity implements UserDetails {
     @Column(name = "tipo_usuario", nullable = false)
     private Role tipoUsuario;
 
-    @Column(name = "fecha_registro", columnDefinition = "TIMESTAMP DEFAULT CURRENT_TIMESTAMP")
+//    @Column(name = "fecha_registro", columnDefinition = "TIMESTAMP DEFAULT CURRENT_TIMESTAMP")
     private LocalDateTime fechaRegistro;
 
-    @Column(nullable = false, columnDefinition = "BOOLEAN DEFAULT true")
+//    @Column(nullable = false, columnDefinition = "BOOLEAN DEFAULT true")
     private Boolean activo = true;
 
     //@Column(/*nullable = false, columnDefinition = "BOOLEAN DEFAULT false")
@@ -50,8 +50,8 @@ public class UsuarioEntity implements UserDetails {
     @Column(name = "fecha_ultimo_acceso")
     private LocalDateTime fechaUltimoAcceso;
 
-    @Column(name = "aceptar_terminos", nullable = false, columnDefinition = "BOOLEAN DEFAULT false")
-    private Boolean aceptarTerminos;
+//    @Column(name = "aceptar_terminos", nullable = false, columnDefinition = "BOOLEAN DEFAULT false")
+    private Boolean aceptarTerminos = false;
 
 
     @Override

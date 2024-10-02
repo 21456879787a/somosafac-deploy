@@ -21,6 +21,6 @@ public class VoluntarioEntity {
     @Column(name = "ocupacion", nullable = false)
     private String ocupacion;
 
-    @Column(name = "estado_voluntario", nullable = false, columnDefinition = "VARCHAR(50) DEFAULT 'Activo'")
-    private String estadoVoluntario;
+//    @Column(name = "estado_voluntario", nullable = false, columnDefinition = "VARCHAR(50) DEFAULT 'Activo'")
+    private String estadoVoluntario = "activo";
 }

@@ -25,6 +25,6 @@ public class MentoriaEntity {
     @Column(name = "fecha_asignacion", nullable = false)
     private LocalDateTime fechaAsignacion;
 
-    @Column(name = "estado_mentoria", nullable = false, columnDefinition = "varchar(50) default 'Pendiente'")
-    private String estadoMentoria;
+//    @Column(name = "estado_mentoria", nullable = false, columnDefinition = "varchar(50) default 'Pendiente'")
+    private String estadoMentoria = "pendiente";
 }

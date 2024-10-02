@@ -24,7 +24,7 @@ public class NotificacionEntity {
     @Column(name = "mensaje", nullable = false)
     private String mensaje;
 
-    @Column(name = "fecha_envio", nullable = false, columnDefinition = "TIMESTAMP DEFAULT CURRENT_TIMESTAMP")
+//    @Column(name = "fecha_envio", nullable = false, columnDefinition = "TIMESTAMP DEFAULT CURRENT_TIMESTAMP")
     private LocalDateTime fechaEnvio;
 
     @Column(name = "tipo_notificacion", nullable = false)
