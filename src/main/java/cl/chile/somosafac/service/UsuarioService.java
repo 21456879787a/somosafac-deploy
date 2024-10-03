@@ -12,7 +12,7 @@ import java.util.List;
 import java.util.NoSuchElementException;
 import java.util.Optional;
 import java.util.stream.Collectors;
-// create
+
 @Service
 public class UsuarioService {
 
@@ -38,6 +38,13 @@ public class UsuarioService {
         return usuario.map(UsuarioDTO::fromEntity).orElse(null);
     }
 
+    @Transactional
+    public UsuarioDTO crearUsuario(UsuarioDTO usuarioDTO) {
+        UsuarioEntity usuario = usuarioDTO.toEntity();
+        usuario.setFechaRegistro(LocalDateTime.now());
+        UsuarioEntity nuevoUsuario = usuarioRepository.save(usuario);
+        return UsuarioDTO.fromEntity(nuevoUsuario);
+    }
 
     @Transactional
     public UsuarioDTO actualizarUsuario(Long id, UsuarioDTO usuarioDTO) {
